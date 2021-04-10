@@ -1,0 +1,53 @@
+<h3> Countdown to my birthday:</h3>
+<p id="MybDay"></p>
+
+<style type="text/css" media="all">
+  body {
+  background-image: url("sleep.jpeg");
+  
+}
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
+  color: rgb(183, 0, 0);
+   background-color: rgb(102, 179, 255);
+  padding: 100px;
+  border-style: double;
+  border-width: 15px;
+  border-color: rgb(0, 153, 0);
+}
+
+h3{
+  text-align: center;
+  font-size: 60px;
+  margin-top: 70px;
+  
+}
+</style>
+<script type="text/javascript" charset="utf-8">
+var MybDay = new Date("Apr 21, 2021 08:10:00").getTime();
+
+ var x = setInterval(function() {
+   
+   var now = new Date().getTime();
+   
+   var distance = MybDay - now;
+   
+   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+   
+   document.getElementById("MybDay").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+   
+   if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("MybDay").innerHTML = "Party Time!";
+}
+}, 1000);
+
+</script>
