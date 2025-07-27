@@ -1,34 +1,49 @@
-<h3> Countdown to my birthday:</h3>
+<h3> Countdown to Your birthday:</h3>
 <p id="MybDay"></p>
 
 <style type="text/css" media="all">
   body {
-  background-image: url("giphy[1].gif");
-  
-}
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 10px;
-  margin-right: 100px;
-  margin-left: 100px;
-  color: rgb(183, 0, 0);
-   background-color: rgb(102, 179, 255);
-  padding: 100px;
-  border-style: double;
-  border-width: 15px;
-  border-color: rgb(0, 153, 0);
-}
-
-h3{
-  text-align: center;
-  font-size: 60px;
-  margin-top: 70px;
-  
-}
+    background-image: url("giphy[1].gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h3 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 8px #333;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+  p#MybDay {
+    text-align: center;
+    font-size: 64px;
+    margin: 0 100px;
+    color: rgb(183, 0, 0);
+    background-color: rgba(102, 179, 255, 0.85);
+    padding: 60px 40px;
+    border-style: double;
+    border-width: 15px;
+    border-color: rgb(0, 153, 0);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 6px #fff, 2px 2px 8px #333;
+    transition: background 0.3s, color 0.3s;
+  }
 </style>
 <script type="text/javascript" charset="utf-8">
-var MybDay = new Date("Apr 21, 2021 08:10:00").getTime();
+var MybDay = new Date("Aug 4, 2025 08:10:00").getTime();
 
  var x = setInterval(function() {
    
